@@ -15,4 +15,10 @@ jobs:
 
             - name: Say Hello
               run: echo "Hello World!!!" 
-
+    
+    test-my-action: 
+        runs-on: ubuntu-latest 
+        steps: 
+            - uses: actions/checkout@v4
+            - name: Run my custom action 
+              uses: ./test-action

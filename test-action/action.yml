@@ -1,0 +1,5 @@
+name: 'My Python Action'
+description: 'Prints a hello message'
+runs: 
+    using: 'docker'
+    image: 'Dockerfile'
