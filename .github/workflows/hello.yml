@@ -3,7 +3,7 @@ name: Hello World
 on: 
     push: 
         branches: [test-branch]
-    pull-request: 
+    pull_request: 
         branches: [main]
 
 jobs: 
