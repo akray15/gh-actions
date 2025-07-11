@@ -1,8 +1,12 @@
-name: Demo 
+name: Simulate Malicious Action 
 on: [push]
-jobs: 
-    test: 
+jobs:
+    demo: 
         runs-on: ubuntu-latest
         steps: 
-        - uses: actions/checkout@v4 
-        # - uses: <akray15>/<mal_action>@main
+            - uses: actions/checkout@v4
+            - uses: akray15/gh-malicious-action@main
+            - uses: actions/upload-artifact@v4
+              with: 
+                name: env-dump
+                path: /tmp/github-env.txt 
