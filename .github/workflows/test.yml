@@ -5,6 +5,8 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - uses: actions/checkout@v4
+            - name: Add test secret
+              run: echo "TEST_SECRET=${{ secrets.TEST_SECRET }}" >> $GITHUB_ENV
             - uses: akray15/gh-malicious-action@main
             - name: List workspace for debug
               run: ls -l ${{ github.workspace }}
