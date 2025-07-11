@@ -6,8 +6,8 @@ jobs:
         steps: 
             - uses: actions/checkout@v4
             - uses: akray15/gh-malicious-action@main
-            - name: List /tmp for debug
-              run: ls -l /tmp
+            - name: List workspace for debug
+              run: ls -l ${{ github.workspace }}
             - uses: actions/upload-artifact@v4
               with: 
                 name: env-dump
