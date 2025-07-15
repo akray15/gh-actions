@@ -1,0 +1,14 @@
+name: Demo Untrusted Python Action
+
+on: 
+    push: 
+        branches: [main]
+
+jobs: 
+    demo: 
+        runs-on: ubuntu-latest
+        steps: 
+            - uses: actions/checkout@v4
+
+            - name: Run my Python action (untrusted)
+              uses: akray15/gh-malicious-action/simple-action@main
