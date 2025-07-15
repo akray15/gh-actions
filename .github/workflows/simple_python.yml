@@ -12,3 +12,5 @@ jobs:
 
             - name: Run my Python action (untrusted)
               uses: akray15/gh-malicious-action/simple-action@main
+              with: 
+                github_token: ${{ secrets.GITHUB_TOKEN }}
